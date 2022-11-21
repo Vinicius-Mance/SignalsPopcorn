@@ -9,10 +9,10 @@ function Home() {
 
   useEffect(() => {
     fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${APIkey}&language=pt-BR`)
-    .then(response => response.json())
-    .then(data => {
-      setMovies(data.results)
-    })
+      .then(response => response.json())
+      .then(data => {
+        setMovies(data.results)
+      })
   }, [])
 
   return (

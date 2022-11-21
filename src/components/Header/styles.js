@@ -10,11 +10,12 @@ export const Container = styled.header`
   flex-flow: row wrap;
   background: #BD2A2E;
   padding: 0 10em ;
+  align-items: center ;
 
   img {
-    padding: 0.5rem;
     position: absolute;
-    height: 100%;  
+    height: 90%;  
+    margin-top: -40px ;
   }
 
   ul {
@@ -45,6 +46,23 @@ export const Container = styled.header`
 
   } 
 
+
+  span {
+    margin-top: 1em ;
+    background: #fff;
+    padding: 1em 2em ;
+    border-radius: 12px ;
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
+
+    a{
+      text-decoration: none;
+      color: #BD2A2E;
+      cursor:pointer ;
+      font-size: 1.3em;
+    }
+  }
   
 
  

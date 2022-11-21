@@ -1,25 +1,32 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { api } from '../../services/axios';
+import { useNavigate } from 'react-router-dom';
+
 import { Container } from './styles';
 
-export default function User() {
+export default function User({
+  handleEnableLogin,
+  isLogged
+}) {
 
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const navigate = useNavigate();
   async function handleRegister(e) {
 
     e.preventDefault()
 
     try {
-      const { data } = await api.post("users", {
-        name,
+      const { data } = await api.post("auth/login", {
         email,
         password
       });
 
       console.log(data)
+      handleEnableLogin()
+
+      navigate("/");
 
     } catch (error) {
       console.log(error)
@@ -29,18 +36,9 @@ export default function User() {
 
   return (
     <Container>
-      <h1>Minha conta</h1>
 
-
+      <h1>Login</h1>
       <form>
-        <label htmlFor="name">Nome</label>
-        <input
-          type="text"
-          name="name"
-          required
-          onChange={(e) => setName(e.target.value)}
-        />
-
         <label htmlFor="email">Email:</label>
         <input
           type="email"
@@ -59,6 +57,7 @@ export default function User() {
 
         <button onClick={handleRegister}>Criar conta</button>
       </form>
+
     </Container>
   )
 }
