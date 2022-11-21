@@ -2,14 +2,13 @@ import { useEffect, useState } from 'react';
 import Movies from '../../components/Movies';
 import { APIkey } from '../../config/key';
 import { Container } from './styles';
-import Header from '../../components/Header';
 
 function Home() {
 
   const [movies, setMovies] = useState([])
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${APIkey}&language=en-US`)
+    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${APIkey}&language=pt-BR`)
     .then(response => response.json())
     .then(data => {
       setMovies(data.results)
