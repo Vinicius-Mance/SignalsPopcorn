@@ -7,9 +7,9 @@ export const Container = styled.header`
   top: 0;
   height: 6rem;
   display: flex;
-  align-tems: center;
   flex-flow: row wrap;
-  background: red;
+  background: #BD2A2E;
+  padding: 0 10em ;
 
   img {
     padding: 0.5rem;
@@ -39,6 +39,7 @@ export const Container = styled.header`
             height: 100%;
             font-size: 1.5rem;
             padding-top: 2.5rem;
+            color: #fff ;
         }
     }
 
