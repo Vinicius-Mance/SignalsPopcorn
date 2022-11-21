@@ -14,7 +14,7 @@ export default function Header({ isLogged }) {
 
       <ul>
         <li><Link to="/">Filmes em destaque</Link></li>
-        {!isLogged && <li><Link to="user">Minha conta</Link></li>}
+        {!isLogged && <li><Link to="login">Minha conta</Link></li>}
       </ul>
 
       <div>

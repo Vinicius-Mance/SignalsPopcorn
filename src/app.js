@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Details from './pages/Details';
 import './global.css'
 import User from './pages/User';
+import Login from './pages/Login';
 
 
 
@@ -23,6 +24,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/details/:id" element={<Details />} />
                 <Route path='user' element={<User handleEnableLogin={handleEnableLogin} isLogged />} />
+                <Route path='login' element={<Login handleEnableLogin={handleEnableLogin} isLogged />} />
             </Routes>
         </BrowserRouter>
     )
