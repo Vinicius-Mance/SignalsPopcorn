@@ -34,7 +34,8 @@ function Details() {
         <h1>{movie.title}</h1>
         <span>Sinopse: {movie.sinopse}</span>
         <span className='release-date'>Release date: {movie.releaseDate}</span>
-        <Link to="/"><button>Go Back</button></Link>
+        <Link to="/"><button>Voltar</button></Link>
+        <button>Assitir</button>
       </div>
     </div>
     </Container>

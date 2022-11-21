@@ -23,7 +23,6 @@ export default function User({
         password
       });
 
-      console.log(data)
       handleEnableLogin()
 
       navigate("/");

@@ -4,6 +4,7 @@ import Logo from "../../assets/logo.png"
 import { Link } from 'react-router-dom';
 
 export default function Header({ isLogged }) {
+
   return (
     <Container>
 
@@ -19,6 +20,7 @@ export default function Header({ isLogged }) {
       <div>
         {
           isLogged ?
+
             <></>
             :
             <span> <Link to="user">Criar Conta</Link></span>
